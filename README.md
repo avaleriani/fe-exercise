@@ -20,7 +20,7 @@ In this coding challenge, you will create a movie search application that displa
 
 2 - Display the movies in a responsive grid like in the picture.
 
-![grid wireframe](https://github.com/avaleriani/fe-exercise/blob/main/public/support/uno.png?raw=true)
+![grid wireframe](https://raw.githubusercontent.com/avaleriani/fe-exercise/main/public/support/one.png?raw=true)
 
 
 The grid should display the movie posters, title, year, and genre. The grid should be responsive, with the number of movies per row changing depending on the screen size. The grid should also be scrollable.
@@ -35,7 +35,7 @@ Movie poster
 
 Plot
 
-![modal wireframe](https://github.com/avaleriani/fe-exercise/blob/main/public/support/uno.png?raw=true)
+![modal wireframe](https://raw.githubusercontent.com/avaleriani/fe-exercise/main/public/support/dos.png?raw=true)
 
 4 - Create a new API endpoint called search.ts that receives a string input and returns the data.json movies filtered by name.
 
