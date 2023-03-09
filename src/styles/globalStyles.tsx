@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "Teko", sans-serif;
+    background: #000000e3;
   }
   a {
     color: inherit;

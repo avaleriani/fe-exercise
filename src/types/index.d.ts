@@ -1,9 +1,10 @@
-interface Movies {
+interface IMovies {
   adult: boolean;
   backdrop_path: string;
-  genre_ids: number[];
+  genres: string[];
   id: number;
   original_language: string;
+  direction: string;
   original_title: string;
   overview: string;
   popularity: number;
@@ -15,6 +16,18 @@ interface Movies {
   vote_count: number;
 }
 
-interface HomeProps {
+interface IMovieCard {
+  id: number;
+  poster_path: string;
+  title: string;
+  genres: string[];
+  release_date: string;
+}
+
+interface IHomeProps {
   movies: Movies[];
+}
+
+interface IMoviePage {
+  id: string | string[] | undefined;
 }

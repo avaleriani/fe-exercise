@@ -1,6 +1,33 @@
 import Head from "next/head";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import MovieCard from "@/components/MovieCard";
+import { MovieListStyled, InputContainer } from "@/styles/homepage";
 
 const Home = () => {
+  const [movies, setMovies] = useState<IMovies[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string | null>();
+
+  const fetchMovies = async () => {
+    const moviesData = (await axios.get("/api/v1/movies/list"))?.data;
+    setMovies(moviesData);
+  };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  const handleSearch = async () => {
+    try {
+      const moviesData = (
+        await axios.get(`/api/v1/movies/search?searchTerm=${searchQuery}`)
+      )?.data;
+      setMovies(moviesData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -9,6 +36,29 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <InputContainer>
+        <input
+          placeholder="Search For a Movie ......"
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </InputContainer>
+      <MovieListStyled>
+        {movies?.map(
+          ({ id, poster_path, title, release_date, genres }: IMovieCard) => {
+            return (
+              <MovieCard
+                key={id}
+                poster_path={poster_path}
+                title={title}
+                genres={genres}
+                release_date={release_date}
+                id={id}
+              />
+            );
+          }
+        )}
+      </MovieListStyled>
     </>
   );
 };
