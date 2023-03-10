@@ -4,6 +4,11 @@
 
 `docker run --env-file=.env.local -p 3000:3000 aysebayraktar/fe-exercise`
 
+# Online Demo
+
+https://namecheap-fe-exercise.vercel.app/
+
+
 # 🎬 Movie Search App :movie_camera:
 
 You will create a simple movie search application using React and Next.js.
