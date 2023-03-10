@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { size } from "../../../util/constants";
+import { size } from "../../../utils/constants";
 
 export const MovieCardWrapper = styled.div`
   margin: 10px;
@@ -10,7 +10,7 @@ export const MovieCardWrapper = styled.div`
   }
 `;
 
-export const ImageContainer = styled.a`
+export const ImageContainer = styled.div`
   width: 100%;
   border-radius: 10px;
   color: black;

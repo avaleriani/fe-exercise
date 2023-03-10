@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { size } from "../../util/constants";
+import { size } from "../../utils/constants";
 
 export const MovieListStyled = styled.div`
   width: 80%;
@@ -52,4 +52,10 @@ export const InputContainer = styled.div`
     width: 100px;
     font-size: 18px;
   }
+`;
+
+export const NoMovieTextStyled = styled.div`
+  color: white;
+  font-size: 19px;
+  margin-top: 15px;
 `;

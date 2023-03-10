@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard renders character card unchanged 1`] = `
+<div>
+  <div
+    class="sc-23eb2687-0 ijpWlN"
+    data-testid="MovieCard__Component"
+  >
+    <a
+      data-testid="MovieBackground__Link"
+      href="?movieId=0"
+    >
+      <div
+        class="sc-23eb2687-1 ENfhq"
+      >
+        <img
+          alt=""
+          src=""
+        />
+      </div>
+    </a>
+    <div
+      class="sc-23eb2687-2 bwKUHx"
+    >
+      <a
+        class="sc-23eb2687-3 gCmYaK"
+        href="?movieId=0"
+      />
+      <div
+        class="sc-23eb2687-4 fZMWqp"
+      >
+        <div
+          class="sc-23eb2687-5 dfqZZz"
+        />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

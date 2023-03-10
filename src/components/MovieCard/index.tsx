@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import { formattedDate } from "../../../util/date";
+import { formattedDate } from "../../../utils/date";
 import {
   ImageContainer,
   MovieCardWrapper,
@@ -19,15 +19,15 @@ const MovieCard: FC<IMovieCard> = ({
 }) => {
   return (
     <MovieCardWrapper data-testid="MovieCard__Component">
-      <Link href={`/movie/${id}`}>
+      <Link href={`?movieId=${id}`} data-testid="MovieBackground__Link">
         <ImageContainer>
           <img src={poster_path} alt={title} />
         </ImageContainer>
       </Link>
       <InfoContainer>
-        <LinkStyled href={`/movie/${id}`}>{title}</LinkStyled>
+        <LinkStyled href={`?movieId=${id}`}>{title}</LinkStyled>
         <GenresWrapper>
-          <GenreStyled>{genres?.toString()}</GenreStyled>
+          {genres && <GenreStyled>{genres.join(", ")}</GenreStyled>}
         </GenresWrapper>
         <div>{formattedDate(release_date)}</div>
       </InfoContainer>

@@ -31,3 +31,7 @@ interface IHomeProps {
 interface IMoviePage {
   id: string | string[] | undefined;
 }
+
+interface IModal {
+  onClose: () => void;
+}

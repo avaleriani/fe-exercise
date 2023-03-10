@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { IMAGES_BASE_PATH } from "../../../../../util/constants";
 import data from "./data.json";
 
 export default async function handler(
@@ -13,7 +12,7 @@ export default async function handler(
     );
     const formattedMovies = movies.map((movie) => ({
       ...movie,
-      poster_path: `${IMAGES_BASE_PATH}${movie.poster_path}`,
+      poster_path: `${process.env.IMAGES_BASE_PATH}${movie.poster_path}`,
     }));
     res.status(200).json(formattedMovies);
   } catch (error) {

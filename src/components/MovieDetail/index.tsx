@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { IMAGES_BASE_PATH } from "../../../util/constants";
-import { formattedDate, getOnlyYear } from "../../../util/date";
+import { formattedDate, getOnlyYear } from "../../../utils/date";
 import LoadingSpinner from "../LoadingSpinner";
 import {
   Container,
@@ -14,17 +13,20 @@ import {
   Title,
   SubTitle,
   OverView,
+  ModalWrapper,
+  CloseButton,
 } from "./styled";
-const MovieModal = () => {
+
+const MovieDetail = () => {
   const router = useRouter();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [selectedMovie, setSelectedMovie] = useState<IMovies>();
 
   const fetchMovies = async () => {
     const movies = (await axios.get("/api/v1/movies/list"))?.data;
     const selectedMovieVal = movies?.find(
-      (item: { id: number }) => item.id === parseInt(router?.query?.movieId)
+      (item: IMovies) => item.id === parseInt(router?.query?.movieId as string)
     );
     setSelectedMovie(selectedMovieVal);
   };
@@ -39,13 +41,16 @@ const MovieModal = () => {
     fetchMovies();
   }, [router.query]);
 
+  const handleCloseModal = () => {
+    router.push("");
+  };
+
   return (
-    <>
+    <ModalWrapper>
+      <CloseButton onClick={handleCloseModal}>×</CloseButton>
       {!loading ? (
         <Container>
-          <BackGroundWrapper
-            background={`${IMAGES_BASE_PATH}${selectedMovie?.poster_path}`}
-          >
+          <BackGroundWrapper background={selectedMovie?.poster_path}>
             <BackGround />
           </BackGroundWrapper>
           <Box>
@@ -80,8 +85,8 @@ const MovieModal = () => {
       ) : (
         router?.query?.movieId && <LoadingSpinner />
       )}
-    </>
+    </ModalWrapper>
   );
 };
 
-export default MovieModal;
+export default MovieDetail;

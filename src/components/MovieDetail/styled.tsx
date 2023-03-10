@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 70%;
   padding: 40px 50px;
 `;
 
@@ -82,4 +81,28 @@ export const OverView = styled.div`
   & > :nth-child(2) {
     color: white;
   }
+`;
+
+export const ModalWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+  color: white;
 `;
