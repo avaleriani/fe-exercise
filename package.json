@@ -7,13 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "CI=true jest"
   },
   "dependencies": {
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "axios": "^0.27.2",
+    "axios": "^0.21.1",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -3,7 +3,7 @@
 exports[`MovieCard renders character card unchanged 1`] = `
 <div>
   <div
-    class="sc-23eb2687-0 ijpWlN"
+    class="sc-23eb2687-0 jOOGww"
     data-testid="MovieCard__Component"
   >
     <a
@@ -11,7 +11,7 @@ exports[`MovieCard renders character card unchanged 1`] = `
       href="?movieId=0"
     >
       <div
-        class="sc-23eb2687-1 ENfhq"
+        class="sc-23eb2687-1 hhdxOX"
       >
         <img
           alt=""
@@ -20,17 +20,17 @@ exports[`MovieCard renders character card unchanged 1`] = `
       </div>
     </a>
     <div
-      class="sc-23eb2687-2 bwKUHx"
+      class="sc-23eb2687-2 EETLY"
     >
       <a
-        class="sc-23eb2687-3 gCmYaK"
+        class="sc-23eb2687-3 Jkggr"
         href="?movieId=0"
       />
       <div
-        class="sc-23eb2687-4 fZMWqp"
+        class="sc-23eb2687-4 fSFKHU"
       >
         <div
-          class="sc-23eb2687-5 dfqZZz"
+          class="sc-23eb2687-5 beRdVS"
         />
       </div>
       <div />
