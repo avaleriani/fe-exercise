@@ -50,6 +50,7 @@ Plot
 - You may use any CSS framework or library you like, such as Styled Components, Emotion, Bootstrap, or Tailwind CSS.
 - You may use any testing library you like, such as Jest or React Testing Library.
 - Please make sure to write clean, readable, and maintainable code.
+- Feel free to create a fork and PR for delivery.
 - Keep it simple.
 
 
